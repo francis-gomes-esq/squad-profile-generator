@@ -39,7 +39,7 @@
 
 ## License
 
-The Squad profile generator operates under license. For licencing details, click here: [MIT License]().
+The Squad profile generator operates under license. For licencing details, click here: [MIT License](https://github.com/francis-gomes-esq/squad-profile-generator?tab=MIT-1-ov-file).
 
 ## List of third-party assets.
 
