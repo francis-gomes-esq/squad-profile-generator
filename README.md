@@ -1,4 +1,4 @@
-# # Squad Profile Generator
+# Squad Profile Generator
 
 ## Description
 
