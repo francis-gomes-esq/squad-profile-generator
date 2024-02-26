@@ -84,3 +84,41 @@ const addTeamMember = () => {
 		})
 	);
 };
+const engineerInfo = () => {
+	inquirer
+		.prompt([
+			{
+				type: 'input',
+				name: 'name',
+				message: "Enter the Engineer's name:",
+			},
+
+			{
+				type: 'input',
+				name: id,
+				message: "Enter the Engneer's ID",
+			},
+
+			{
+				type: 'input',
+				name: 'email',
+				message: "Enter the Engineer's email",
+			},
+
+			{
+				type: 'input',
+				name: 'github',
+				message: "Enter the Engineer's github",
+			},
+		])
+		.then(answer => {
+			const engineer = new engineer(
+				answer.name,
+				answer.id,
+				answer.email,
+				answer.github
+			);
+			team.push(engineer);
+			addTeamMember();
+		});
+};
