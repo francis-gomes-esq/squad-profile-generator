@@ -37,10 +37,11 @@ const managerData = () => {
 				name: 'officeNumber',
 				message: "Enter the Manager's office number:",
 			},
+
+			// This block adds a manager to the team array and then adds more team members.
 		])
-		// This block adds a manager to the team array and then adds more team members.
 		.then(answer => {
-			const manager = new manager(
+			const manager = new Manager(
 				answer.name,
 				answer.id,
 				answer.email,
@@ -70,9 +71,9 @@ const addTeamMember = () => {
 						},
 					])
 					.then(answer => {
-						if (answer.addTeamMember === 'Engineer') {
+						if (answer.addMember === 'Engineer') {
 							engineerInfo();
-						} else if (answer.addTeamMember === 'Intern') {
+						} else if (answer.addMember === 'Intern') {
 							internInfo();
 						} else {
 							createHtml();
@@ -114,7 +115,7 @@ const engineerData = () => {
 			},
 		])
 		.then(answer => {
-			const engineer = new engineer(
+			const engineer = new Engineer(
 				answer.name,
 				answer.id,
 				answer.email,
@@ -153,7 +154,7 @@ const internData = () => {
 			},
 		])
 		.then(answer => {
-			const intern = new intern(
+			const intern = new Intern(
 				answer.name,
 				answer.id,
 				answer.email,
