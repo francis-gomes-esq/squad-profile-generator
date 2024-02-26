@@ -166,13 +166,16 @@ const internData = () => {
 
 managerData();
 
+// Function to create HTML file
 const createHTML = () => {
 	const htmlContent = render(team);
 
+	// Check if output directory exists, if not, create it
 	if (!fs.existsSync(OUTPUT_DIR)) {
 		fs.mkdirSync(OUTPUT_DIR);
 	}
 
+	// Write HTML content to file
 	fs.writeFile(outputPath, htmlContent, err => {
 		if (err) {
 			console.log(err);
