@@ -84,6 +84,8 @@ const addTeamMember = () => {
 		})
 	);
 };
+
+// Function to gather information about an engineer
 const engineerInfo = () => {
 	inquirer
 		.prompt([
