@@ -47,6 +47,40 @@ const managerInfo = () => {
 				answer.officeNumber
 			);
 			team.push(manager);
-			addTeamMemeber();
+			addTeamMember();
 		});
+};
+
+const addTeamMember = () => {
+	inquirer.prompt(
+		[
+			{
+				type: 'confirm',
+				name: 'check',
+				message: 'Add a team member:',
+			},
+		].then(response => {
+			if (response.check) {
+				inquirer
+					.prompt([
+						{
+							type: 'List',
+							name: 'addMember',
+							choices: ['Engineer', 'Intern', 'Complete'],
+						},
+					])
+					.then(answer => {
+						if (answer.addTeamMember === 'Engineer') {
+							engineerInfo();
+						} else if (answer.addTeamMember === 'Intern') {
+							internInfo();
+						} else {
+							createHtml();
+						}
+					});
+			} else {
+				createHTML;
+			}
+		})
+	);
 };
