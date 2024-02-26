@@ -14,7 +14,7 @@ const render = require('./src/page-template.js');
 const team = [];
 
 // Function to gather information about the manager
-const managerInfo = () => {
+const managerData = () => {
 	inquirer
 		.prompt([
 			{
@@ -86,7 +86,7 @@ const addTeamMember = () => {
 };
 
 // Function to gather information about an engineer
-const engineerInfo = () => {
+const engineerData = () => {
 	inquirer
 		.prompt([
 			{
@@ -121,6 +121,45 @@ const engineerInfo = () => {
 				answer.github
 			);
 			team.push(engineer);
+			addTeamMember();
+		});
+};
+
+const internData = () => {
+	inquirer
+		.prompt([
+			{
+				type: 'input',
+				name: 'name',
+				message: "Enter the Intern's name:",
+			},
+
+			{
+				type: 'input',
+				name: 'id',
+				message: "Enter the Intern's ID:",
+			},
+
+			{
+				type: 'input',
+				name: 'email',
+				message: "Enter the Intern's email",
+			},
+
+			{
+				type: 'input',
+				name: 'github',
+				message: "Enter the Intern's github",
+			},
+		])
+		.then(answer => {
+			const intern = new intern(
+				answer.name,
+				answer.id,
+				answer.email,
+				answer.github
+			);
+			team.push(intern);
 			addTeamMember();
 		});
 };
