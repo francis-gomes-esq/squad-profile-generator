@@ -98,7 +98,7 @@ const engineerData = () => {
 			{
 				type: 'input',
 				name: id,
-				message: "Enter the Engneer's ID",
+				message: "Enter the Engineer's ID",
 			},
 
 			{
