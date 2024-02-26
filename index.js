@@ -1,20 +1,20 @@
-const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
-const inquirer = require('inquirer');
-const path = require('path');
-const fs = require('fs');
+const Manager = require('./lib/Manager')
+const Engineer = require('./lib/Engineer')
+const Intern = require('./lib/Intern')
+const inquirer = require('inquirer')
+const path = require('path')
+const fs = require('fs')
 
-const OUTPUT_DIR = path.resolve(__dirname, 'output');
-const outputPath = path.join(OUTPUT_DIR, 'team.html');
+const OUTPUT_DIR = path.resolve(__dirname, 'output')
+const outputPath = path.join(OUTPUT_DIR, 'team.html')
 
-const render = require('./src/page-template.js');
+const render = require('./src/page-template.js')
 
 // Array to store team members
-const team = [];
+const team = []
 
 // Function to gather information about the manager
-const managerData = () => {
+const managerInfo = () => {
 	inquirer
 		.prompt([
 			{
@@ -46,48 +46,48 @@ const managerData = () => {
 				answer.id,
 				answer.email,
 				answer.officeNumber
-			);
-			team.push(manager);
-			addTeamMember();
-		});
-};
+			)
+			team.push(manager)
+			addTeamMember()
+		})
+}
 
 const addTeamMember = () => {
-	inquirer.prompt(
-		[
+	inquirer
+		.prompt([
 			{
 				type: 'confirm',
 				name: 'check',
 				message: 'Add a team member:',
 			},
-		].then(response => {
+		])
+		.then(response => {
 			if (response.check) {
 				inquirer
 					.prompt([
 						{
-							type: 'List',
+							type: 'list',
 							name: 'addMember',
 							choices: ['Engineer', 'Intern', 'Complete'],
 						},
 					])
 					.then(answer => {
 						if (answer.addMember === 'Engineer') {
-							engineerInfo();
+							engineerInfo()
 						} else if (answer.addMember === 'Intern') {
-							internInfo();
+							internInfo()
 						} else {
-							createHtml();
+							createHTML()
 						}
-					});
+					})
 			} else {
-				createHTML;
+				createHTML
 			}
 		})
-	);
-};
+}
 
 // Function to gather information about an engineer
-const engineerData = () => {
+const engineerInfo = () => {
 	inquirer
 		.prompt([
 			{
@@ -120,13 +120,13 @@ const engineerData = () => {
 				answer.id,
 				answer.email,
 				answer.github
-			);
-			team.push(engineer);
-			addTeamMember();
-		});
-};
+			)
+			team.push(engineer)
+			addTeamMember()
+		})
+}
 // Function to gather information about an intern
-const internData = () => {
+const internInfo = () => {
 	inquirer
 		.prompt([
 			{
@@ -159,30 +159,29 @@ const internData = () => {
 				answer.id,
 				answer.email,
 				answer.github
-			);
-			team.push(intern);
-			addTeamMember();
-		});
-};
+			)
+			team.push(intern)
+			addTeamMember()
+		})
+}
 
-managerData();
-
+managerInfo()
 // Function to create HTML file
 const createHTML = () => {
-	const htmlContent = render(team);
+	const htmlContent = render(team)
 
 	// Check if output directory exists, if not, create it
 	if (!fs.existsSync(OUTPUT_DIR)) {
-		fs.mkdirSync(OUTPUT_DIR);
+		fs.mkdirSync(OUTPUT_DIR)
 	}
 
 	// Write HTML content to file
 	fs.writeFile(outputPath, htmlContent, err => {
 		if (err) {
-			console.log(err);
+			console.error(err)
 		}
-		return;
-	});
+		return
+	})
 
-	console.log('Your HTML is created');
-};
+	console.log('Your HTML is created')
+}
