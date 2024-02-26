@@ -163,3 +163,22 @@ const internData = () => {
 			addTeamMember();
 		});
 };
+
+managerData();
+
+const createHTML = () => {
+	const htmlContent = render(team);
+
+	if (!fs.existsSync(OUTPUT_DIR)) {
+		fs.mkdirSync(OUTPUT_DIR);
+	}
+
+	fs.writeFile(outputPath, htmlContent, err => {
+		if (err) {
+			console.log(err);
+		}
+		return;
+	});
+
+	console.log('Your HTML is created');
+};
