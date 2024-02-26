@@ -124,7 +124,7 @@ const engineerData = () => {
 			addTeamMember();
 		});
 };
-
+// Function to gather information about an intern
 const internData = () => {
 	inquirer
 		.prompt([
