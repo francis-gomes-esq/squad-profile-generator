@@ -8,7 +8,9 @@ I leveraged Node.js to create a command-line application that utilizes Jest for 
 
 ## Screenshots
 
-![test run](./assets/images/passing-tests-00.png)
+![test run](./assets/images/passing-tests-00.png) [squad-profile-generator.webm](https://github.com/francis-gomes-esq/squad-profile-generator/assets/152029704/ddbf2b38-da6a-4700-940c-f50f142783a5)
+
+## Screenshots
 
 ## Features
 
