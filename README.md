@@ -51,7 +51,7 @@ I leveraged Node.js to create a command-line application that utilizes Jest for 
 
 1. Navigate to the project directory
 
-2. Run this command in your Terminal
+2. Run this command in your Terminal to generate the output HTML
 
     - `node index.js`
 
@@ -65,6 +65,9 @@ The Squad profile generator operates under license. For licencing details, click
 
 -   [Node.js version @6.5.0](https://nodejs.org/docs/latest/api/fs.html)
 -   [Inquirer.js](https://www.npmjs.com/package/inquirer)
+-   [jest](https://jestjs.io/)
+-   [fontawesome](https://kit.fontawesome.com/c502137733.js)
+-   [Bootstrap](https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css)
 
 ## Contributing
 
@@ -72,7 +75,7 @@ Contributors are welcome to fork repo, enhance code, and commit changes. Create 
 
 ## Tests
 
--   Run tests with this command
+-   Run Jest tests with this command
 
     -   `npm run test`
 
