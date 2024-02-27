@@ -10,7 +10,8 @@ I leveraged Node.js to create a command-line application that utilizes Jest for 
 
 ## Screenshots
 
-![test run](./assets/images/passing-tests-00.png)
+-   ![test run](./assets/images/passing-tests-00.png)
+-   ![output team html](./assets/images/render_output-team-html.png)
 
 ## Features
 
