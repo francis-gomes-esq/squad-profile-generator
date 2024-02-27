@@ -4,6 +4,10 @@
 
 I leveraged Node.js to create a command-line application that utilizes Jest for unit testing and Inquirer for user input. This application efficiently gathers information about team members in software engineering. Upon user input, it dynamically generates an HTML webpage showcasing summaries for each team member, complete with their emails and GitHub profiles. Execution is seamless with the simple command 'node index.js,' ensuring smooth operation and alignment with user story requirements."
 
+## Demo
+
+## Screenshots
+
 ## Features
 
 -   User Input Handling: Collects information from the user in a structured manner using inquirer prompts, facilitating interaction with the programme.
@@ -20,6 +24,8 @@ I leveraged Node.js to create a command-line application that utilizes Jest for 
 
 ## Table of Contents
 
+-   [Demo](#demo)
+-   [Screenshots](#screenshots)
 -   [Features](#features)
 -   [Installation](#installation)
 -   [Usage](#usage)
