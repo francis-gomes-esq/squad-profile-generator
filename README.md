@@ -8,6 +8,8 @@ I leveraged Node.js to create a command-line application that utilizes Jest for 
 
 ## Screenshots
 
+![test run](./assets/images/passing-tests-00.png)
+
 ## Features
 
 -   User Input Handling: Collects information from the user in a structured manner using inquirer prompts, facilitating interaction with the programme.
