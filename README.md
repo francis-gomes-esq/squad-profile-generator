@@ -4,13 +4,19 @@
 
 I leveraged Node.js to create a command-line application that utilizes Jest for unit testing and Inquirer for user input. This application efficiently gathers information about team members in software engineering. Upon user input, it dynamically generates an HTML webpage showcasing summaries for each team member, complete with their emails and GitHub profiles. Execution is seamless with the simple command 'node index.js,' ensuring smooth operation and alignment with user story requirements."
 
-[]()
-
 ## Features
 
--
+-   User Input Handling: Collects information from the user in a structured manner using inquirer prompts, facilitating interaction with the programme.
 
--
+-   Dynamic HTML Generation: Constructs HTML content dynamically based on user input, providing a visual representation of the team members.
+
+-   Object-Oriented Programming (OOP): utilises classes and objects to encapsulate data and behaviours, promoting code organisation and reusability.
+
+-   Asynchronous Control Flow: Utilises promises and asynchronous functions to manage the flow of operations, enhancing responsiveness and efficiency.
+
+-   Modularization: Separates functionalities into different modules and files, promoting code organisation, maintainability, and reusability.
+
+-   File System Interaction: Interacts with the file system to create directories and write generated HTML content to a file, facilitating data persistence and output.
 
 ## Table of Contents
 
@@ -54,7 +60,9 @@ Contributors are welcome to fork repo, enhance code, and commit changes. Create 
 
 ## Tests
 
--
+-   Run tests with this command
+
+    -   `npm run test`
 
 ## Questions
 
