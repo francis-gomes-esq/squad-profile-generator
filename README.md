@@ -55,6 +55,8 @@ I leveraged Node.js to create a command-line application that utilizes Jest for 
 
     - `node index.js`
 
+-   Click on the link to view the [Squad Profile Generator](https://francis-gomes-esq.github.io/squad-profile-generator/)
+
 ## License
 
 The Squad profile generator operates under license. For licencing details, click here: [MIT License](https://github.com/francis-gomes-esq/squad-profile-generator?tab=MIT-1-ov-file).
