@@ -5,9 +5,12 @@
 I leveraged Node.js to create a command-line application that utilizes Jest for unit testing and Inquirer for user input. This application efficiently gathers information about team members in software engineering. Upon user input, it dynamically generates an HTML webpage showcasing summaries for each team member, complete with their emails and GitHub profiles. Execution is seamless with the simple command 'node index.js,' ensuring smooth operation and alignment with user story requirements."
 
 ## Demo
+
 [squad-profile-generator.webm](https://github.com/francis-gomes-esq/squad-profile-generator/assets/152029704/ddbf2b38-da6a-4700-940c-f50f142783a5)
 
 ## Screenshots
+
+![test run](./assets/images/passing-tests-00.png)
 
 ## Features
 
